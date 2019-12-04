@@ -1,0 +1,3 @@
+Objects: Game, App, Number, Range, Player, Hint, Variant, Win
+Methods: drawANumber(), tellARange(), guessTheNumber(), giveAHint(), run(), 
+
