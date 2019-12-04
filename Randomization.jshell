@@ -1,0 +1,32 @@
+ThreadLocalRandom.current().nextInt(1, 101);
+int randomNumber = ThreadLocalRandom.current().nextInt(1, 101);
+randomNumber
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+float randomFloat = ThreadLocalRandom.current().nextFloat()
+new Scanner(System.in).nextInt();
+new Scanner(System.in).nextInt();
+/save -history Randomization
