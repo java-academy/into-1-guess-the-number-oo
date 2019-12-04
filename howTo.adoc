@@ -11,3 +11,15 @@ There's also a PNG version.
 == Launch this?
 
 Not from IDE, unless you configure it. Since it's a one file, why not `java GuessTheNumber.java`
+
+== Read CRC cards
+
+Name: name of the class
+Responsibility: the main question the class answers
+Collaborators: who is needed to do that
+
+Example:
+
+    Range - randomizes the number - GuessingNumber, java.util.Random
+
+Notice FQN on JDK class, while no FQN on our class

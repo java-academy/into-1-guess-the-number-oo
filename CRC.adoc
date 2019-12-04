@@ -1,0 +1,17 @@
+= CRC
+
+CRC :: Class - Responsibility - Collaborators, an XP technique to find out what objects we need and how they will collaborate.
+
+== Guess the number game
+
+include::koncepty[file koncepty not found]
+
+Game - main loop of the game - UI, RandomNumber, ChosenNumber, Hints, Msgs, Range
+UI - talking with user - System.out.println, Scanner.nextInt
+RandomNumber - is the other number higher, lower or same
+ChosenNumber - what is the user number (other implementation of GuessedNumber, provided by UI), UI
+GuessedNumber - interface to compare numbers (from user and randomized)
+Hints - concept rolled up in Msgs
+Msgs - what user can see from our program
+Range - how to randomize the number for the game - java.util.Random,RandomNumber
+
