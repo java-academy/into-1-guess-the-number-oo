@@ -1,0 +1,10 @@
+game
+draw a number 
+range
+default range 1 100
+player
+guess
+chosen number
+correct number
+too high
+too low

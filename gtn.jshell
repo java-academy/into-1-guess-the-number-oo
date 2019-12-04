@@ -1,0 +1,16 @@
+new Random().nextInt(100)
+new Random().nextInt(100)
+new Random().nextInt(100)
+new Random().nextInt(100)
+new Random().nextInt(100)
+new Random().nextInt(100)
+new Random().nextInt(100)
+new Random().nextInt(100)
+new Random().nextInt(100)+1
+new Random().nextInt(100)+1
+new Random().nextInt(100)+1
+new Random().nextInt(100)+1
+new Random().nextInt(100)+1
+new Random().nextInt(100)+1
+new Random().nextInt(100)+1
+new Scanner(System.in).nextLine()

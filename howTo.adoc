@@ -1,0 +1,10 @@
+= About
+
+Answers the How to do X questions.
+
+== How to open a drawio file?
+
+Using http://draw.io and loading from it.
+
+There's also a PNG version.
+
