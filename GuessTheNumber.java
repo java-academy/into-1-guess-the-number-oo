@@ -10,10 +10,10 @@ class GuessTheNumber {
         do {
             userNumber = new Scanner(System.in).nextInt();
             if (userNumber > secretNumber) {
-                System.out.println("Too high!")
+                System.out.println("Too high!");
             }
             if (userNumber < secretNumber) {
-                System.out.println("Too low!")
+                System.out.println("Too low!");
             }
         } while (userNumber != secretNumber);
 
