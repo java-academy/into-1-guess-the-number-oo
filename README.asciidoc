@@ -10,6 +10,8 @@ Game gives the hint if the player didn't guess the correct number.
 
 IMPORTANT: Game variants: number of tries is limited and ranges can be taken _NOT ONLY_ from natural numbers.
 
+TIP: see Steps, at the bottom of the page for how to proceed.
+
 == Prerequirements
 
 . *JDK11+*.
@@ -17,6 +19,8 @@ IMPORTANT: Game variants: number of tries is limited and ranges can be taken _NO
 . A sheet of paper and a pen.
 
 == Requirements
+
+Remember to meet both NF and F!
 
 === Non-functional
 
@@ -43,3 +47,33 @@ IMPORTANT: Game variants: number of tries is limited and ranges can be taken _NO
 .. Configuration is by asking and choosing lower between the default and what the user gave.
 . Game give the hints when the number is too low or too high as follows ''Number is too low!'' And ''Number is too high!''.
 . Winning is announced in a message: ''Correct! That’s the number!''.
+
+=== Steps
+
+Work on branches!
+
+TIP: use mantra!
+
+. read the specification requirements, both functional and non-functional
+. conceptualize: write down nouns and verbs from the specs (main ones)
+. draw a flow chart for a simple version of the program
+. Branch **JShell**: launch JShell and tackle there the main technical problem you anticipate
+.. randomization?
+.. asking the user for his input?
+.. save the results, add, commit, push
+. Branch **impera**: rework the jshell file into a Java file, with proper class and main method. Use just `java` to launch it, code imperatively for now.
+
+TIP: so far you have been increasing your familiarity with the problem. It's time to do more. For instance: let's introduce OOP.
+
+. Branch OOP 
+.. if you haven't so far - use mantra and have a full-blown project with `pom.xml`, Maven, etc.
+.. draw CRC diagrams or class diagrams from UML. 
+.. try finding out how your objects will work. Do you need more than 1 package?
+.. name your main package appropriately
+. Branch TDD
+.. add TestNG to your POM - on test scope of course
+.. create a `TODO.lst` file and have their the list of your test scenarios
+.. scenario by scenario do the TDD mantra: red-green-refactor
+. Branch FP
+.. introduce functional API: streams and lambdas
+.. perhaps write a version of the app where you do everything in one line (stream!)
