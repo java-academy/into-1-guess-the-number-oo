@@ -13,6 +13,9 @@ class GuessTheNumberGame {
         final Range range = new Range(1, 100);
         System.out.println(" of " + range.toString());
         final RandomNumber randomized = range.randomize();
-        System.out.println(randomized);
+        ChosenNumber chosen = UI.askForNumber();
+        do {
+
+        } while randomized.
     }
 }
