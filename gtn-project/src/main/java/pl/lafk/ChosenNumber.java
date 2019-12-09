@@ -20,7 +20,7 @@ class ChosenNumber implements GuessableNumber{
     }
 
     @Override
-    public Answer isTheOne() {
+    public Answer isTheOne(Number guess) {
         throw new UnsupportedOperationException(" a chosen number cannot be the one");
     }
 
@@ -29,4 +29,5 @@ class ChosenNumber implements GuessableNumber{
         final int oVal = o.intValue();
         return Integer.compare(chosen, oVal);
     }
+
 }

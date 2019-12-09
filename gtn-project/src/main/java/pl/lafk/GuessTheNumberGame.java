@@ -1,5 +1,7 @@
 package pl.lafk;
 
+import java.util.stream.IntStream;
+
 /**
  * Starts the game, holds the main loop
  *
@@ -13,10 +15,22 @@ class GuessTheNumberGame {
         final Range range = new Range(1, 100);
         System.out.println(" of " + range.toString());
         final RandomNumber randomized = range.randomize();
-        ChosenNumber chosen = UI.askForNumber();
-        System.out.println(chosen);
+        System.out.println(randomized);
+        ChosenNumber chosen = null;
+        testAsercji();
         do {
+            chosen = UI.askForNumber();
+            System.out.println(chosen);
+        } while (randomized.isTheOne(null).equals(Answer.CORRECT));
+    }
 
-        } while (true);
+    private static void testAsercji() {
+        IntStream.rangeClosed(-5,5).forEach(i -> {
+            try {
+                System.out.println(Answer.of(i));
+            } catch (AssertionError ae) {
+                System.err.println(ae.getMessage());
+            }
+        });
     }
 }
