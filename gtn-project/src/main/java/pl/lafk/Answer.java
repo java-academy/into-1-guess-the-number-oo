@@ -9,6 +9,15 @@ enum Answer {
         this.val = val;
     }
 
+    static Answer of(int compareAnswer) {
+        switch(compareAnswer) {
+            case -1: return TOO_LOW;
+            case 1: return TOO_HIGH;
+            case 0: return CORRECT;
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return this.name();

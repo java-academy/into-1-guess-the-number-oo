@@ -22,7 +22,7 @@ class RandomNumber implements GuessableNumber {
 
     @Override
     public Answer isTheOne(Number guess) {
-        return new Answer(compareTo(guess));
+        return Answer.of(compareTo(guess));
     }
 
     @Override
