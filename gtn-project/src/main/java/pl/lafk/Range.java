@@ -1,6 +1,8 @@
 package pl.lafk;
 
+import java.util.OptionalInt;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 /**
  * @author Tomasz @LAFK_pl Borek
@@ -14,8 +16,10 @@ class Range {
     }
 
     Range(int floor, int ceiling) {
-        this.floor = floor;
-        this.ceiling = ceiling;
+        int tmp_floor = Math.min(floor,ceiling);
+        int tmp_ceiling = Math.max(floor, ceiling);
+        this.floor = Math.max(tmp_floor,0);
+        this.ceiling = Math.min(Integer.MAX_VALUE, tmp_ceiling);
     }
 
     @Override
