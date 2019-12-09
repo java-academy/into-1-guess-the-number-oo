@@ -9,6 +9,10 @@ class Range {
     private final int floor;
     private final int ceiling;
 
+    Range() {
+        this(1,100);
+    }
+
     Range(int floor, int ceiling) {
         this.floor = floor;
         this.ceiling = ceiling;
@@ -20,6 +24,6 @@ class Range {
     }
 
     RandomNumber randomize() {
-        return new RandomNumber(new Random().nextInt(ceiling)+1);
+        return new RandomNumber(new Random().nextInt(ceiling-floor)+floor+1);
     }
 }

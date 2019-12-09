@@ -1,7 +1,5 @@
 package pl.lafk;
 
-import java.util.Scanner;
-
 import static pl.lafk.Answer.CORRECT;
 
 /**
@@ -11,11 +9,10 @@ import static pl.lafk.Answer.CORRECT;
  */
 class GuessTheNumberGame {
 
-
     public static void main(String[] args) {
-        UI ui = new UI(new Scanner(System.in), System.out);
+        UI ui = new UI();
         ui.say("Welcome in Guess the number game.");
-        final Range range = new Range(1, 100);
+        final Range range = ui.parse(args);
         ui.say(String.format("You need to find a secret number chosen from a range of %s", range.toString()));
         final RandomNumber randomized = range.randomize();
         ChosenNumber chosen = null;
@@ -28,5 +25,4 @@ class GuessTheNumberGame {
         } while (!theOne.equals(CORRECT));
         ui.say("Ending the game");
     }
-
 }
