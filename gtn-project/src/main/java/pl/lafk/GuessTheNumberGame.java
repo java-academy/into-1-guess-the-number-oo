@@ -21,7 +21,7 @@ class GuessTheNumberGame {
         do {
             chosen = UI.askForNumber();
             System.out.println(chosen);
-        } while (randomized.isTheOne(null).equals(Answer.CORRECT));
+        } while (randomized.isTheOne(chosen).equals(Answer.CORRECT));
     }
 
     private static void testAsercji() {

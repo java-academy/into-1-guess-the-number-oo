@@ -10,16 +10,14 @@ import java.util.Objects;
  *
  * @author Tomasz @LAFK_pl Borek
  */
-class RandomNumber implements GuessableNumber {
-    private int nr;
-
+class RandomNumber extends BaseNumber {
     RandomNumber(int nr) {
-        this.nr = nr;
+        super(nr);
     }
 
     @Override
     public String toString() {
-        return String.valueOf(nr);
+        return String.valueOf(chosen);
     }
 
     @Override
@@ -27,21 +25,4 @@ class RandomNumber implements GuessableNumber {
         return Answer.of(compareTo(guess));
     }
 
-    @Override
-    public int compareTo(Number o) {
-        return 0;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof RandomNumber)) return false;
-        RandomNumber that = (RandomNumber) o;
-        return nr == that.nr;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(nr);
-    }
 }

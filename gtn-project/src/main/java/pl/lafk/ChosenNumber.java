@@ -7,11 +7,10 @@ package pl.lafk;
  * @author Tomasz @LAFK_pl Borek
  * @see GuessableNumber
  */
-class ChosenNumber implements GuessableNumber{
-    private int chosen;
+class ChosenNumber extends BaseNumber {
 
     ChosenNumber(int chosen) {
-        this.chosen = chosen;
+        super(chosen);
     }
 
     @Override
@@ -22,12 +21,6 @@ class ChosenNumber implements GuessableNumber{
     @Override
     public Answer isTheOne(Number guess) {
         throw new UnsupportedOperationException(" a chosen number cannot be the one");
-    }
-
-    @Override
-    public int compareTo(Number o) {
-        final int oVal = o.intValue();
-        return Integer.compare(chosen, oVal);
     }
 
 }
