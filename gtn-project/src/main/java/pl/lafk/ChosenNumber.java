@@ -15,7 +15,7 @@ class ChosenNumber extends BaseNumber {
 
     @Override
     public String toString() {
-        return String.valueOf(chosen);
+        return String.format("You've chosen %d%n", chosen);
     }
 
     @Override

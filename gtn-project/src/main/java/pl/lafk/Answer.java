@@ -14,9 +14,9 @@ enum Answer {
         assert compareAnswer > -2 && compareAnswer < 2 : String.format(errorMsg, compareAnswer);
         switch(compareAnswer) {
             case -1:
-                return TOO_LOW;
-            case 1:
                 return TOO_HIGH;
+            case 1:
+                return TOO_LOW;
             default:
                 return CORRECT;
         }
@@ -24,7 +24,7 @@ enum Answer {
 
     @Override
     public String toString() {
-        return this.name();
+        return this.name().replace("_", " ");
     }
 
 

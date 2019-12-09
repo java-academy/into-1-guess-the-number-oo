@@ -14,7 +14,7 @@ class UI {
         return new ChosenNumber(new Scanner(System.in).nextInt());
     }
 
-    private static void say(String s) {
+    static void say(String s) {
         System.out.println(s);
     }
 }

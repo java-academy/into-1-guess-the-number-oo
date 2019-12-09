@@ -2,6 +2,8 @@ package pl.lafk;
 
 import java.util.stream.IntStream;
 
+import static pl.lafk.Answer.CORRECT;
+
 /**
  * Starts the game, holds the main loop
  *
@@ -9,20 +11,21 @@ import java.util.stream.IntStream;
  */
 class GuessTheNumberGame {
 
+
     public static void main(String[] args) {
-        System.out.println("Welcome in Guess the number game.");
-        System.out.print("You need to find a secret number chosen from a range");
+        UI.say("Welcome in Guess the number game.");
         final Range range = new Range(1, 100);
-        System.out.println(" of " + range.toString());
+        UI.say(String.format("You need to find a secret number chosen from a range of %s", range.toString()));
         final RandomNumber randomized = range.randomize();
-        System.out.println(randomized);
         ChosenNumber chosen = null;
+        Answer theOne = null;
         do {
             chosen = UI.askForNumber();
             System.out.println(chosen);
-            System.out.println(randomized.compareTo(chosen));
-        } while (!randomized.isTheOne(chosen).equals(Answer.CORRECT));
-        System.out.println("Ending message");
+            theOne = randomized.isTheOne(chosen);
+            UI.say(theOne.toString());
+        } while (!theOne.equals(CORRECT));
+        UI.say("Ending the game");
     }
 
 }
