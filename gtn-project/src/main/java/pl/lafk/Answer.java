@@ -1,5 +1,7 @@
 package pl.lafk;
 
+import java.util.stream.IntStream;
+
 enum Answer {
     TOO_HIGH,TOO_LOW,CORRECT;
 
@@ -24,4 +26,24 @@ enum Answer {
     public String toString() {
         return this.name();
     }
+
+
+    /**
+     * Wykorzystaj do sprawdzenia czy asercje działają na Twojej maszynie.
+     * Na produkcji nie powinny.
+     * @see <a href="https://docs.oracle.com/cd/E19683-01/806-7930/assert-5/index.html">programistyczne włączanie asercji</a>
+     * @see <a href="https://stackoverflow.com/questions/19966620/enable-assert-in-a-maven-built-project">włączanie asercji Mavenem</a>
+     */
+    public static void main(String[] args) {
+        System.out.println("Testujemy asercje - jeśli widzisz dużo CORRECT to nie są włączone");
+
+        IntStream.rangeClosed(-5,5).forEach(i -> {
+            try {
+                System.out.println(Answer.of(i));
+            } catch (AssertionError ae) {
+                System.err.println(ae.getMessage());
+            }
+        });
+    }
+
 }

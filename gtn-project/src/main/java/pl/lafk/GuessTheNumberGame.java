@@ -17,20 +17,12 @@ class GuessTheNumberGame {
         final RandomNumber randomized = range.randomize();
         System.out.println(randomized);
         ChosenNumber chosen = null;
-        testAsercji();
         do {
             chosen = UI.askForNumber();
             System.out.println(chosen);
-        } while (randomized.isTheOne(chosen).equals(Answer.CORRECT));
+            System.out.println(randomized.compareTo(chosen));
+        } while (!randomized.isTheOne(chosen).equals(Answer.CORRECT));
+        System.out.println("Ending message");
     }
 
-    private static void testAsercji() {
-        IntStream.rangeClosed(-5,5).forEach(i -> {
-            try {
-                System.out.println(Answer.of(i));
-            } catch (AssertionError ae) {
-                System.err.println(ae.getMessage());
-            }
-        });
-    }
 }
