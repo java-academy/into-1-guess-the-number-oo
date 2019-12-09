@@ -1,20 +1,32 @@
 package pl.lafk;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
- * User Interface class.
+ * User Interface keeps the communication with the user open.
+ * This effectively happens through {@link java.util.Scanner} and {@link java.io.PrintStream}
+ *
+ * Reason for existence: if I choose to change the UI from console to graphics then I'm ready.
  *
  * @author Tomasz @LAFK_pl Borek
  */
 class UI {
 
-    static ChosenNumber askForNumber() {
-        UI.say("Choose a number from a range: ");
-        return new ChosenNumber(new Scanner(System.in).nextInt());
+    private Scanner in;
+    private PrintStream out;
+
+    UI(Scanner scanner, PrintStream out) {
+        in = scanner;
+        this.out = out;
     }
 
-    static void say(String s) {
-        System.out.println(s);
+    ChosenNumber askForNumber() {
+        say("Choose a number from a range: ");
+        return new ChosenNumber(in.nextInt());
+    }
+
+    void say(String s) {
+        out.println(s);
     }
 }
